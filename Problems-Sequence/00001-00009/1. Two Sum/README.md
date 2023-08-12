@@ -74,34 +74,37 @@ Algorithm
 
 ## Solution 1.
 
-```cpp
+```py
 // OJ: https://leetcode.com/problems/two-sum/
 // Time: O(N)
 // Space: O(N)
 
-class Solution 
-{
-public:
-    vector<int> twoSum(vector<int>& A, int target) 
-    {
-        // Create the unordered map 
-        unordered_map<int, int> m;
+class Solution:
+    
+    # Define the method
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
         
-        // Iterate on the for loop
-        for (int i = 0; i < A.size(); ++i) 
-        {
-            // Compute the target 
-            int t = target - A[i];
-            
-            // Count the t 
-            if (m.count(t)) return { m[t], i };
-            
-            // Else insert into the hashmap
-            m[A[i]] = i;
-        }
+        # Print the incoming nums
+        print("Incoming numbers : {} and Respective target : {}".format(nums,target))
         
-        // Else at last return the empty vector
-        return {};
-    }
-};
+        # Define the previous_map
+        previous_map={}
+        
+        # Iterate on the nums array
+        for index, value in enumerate(nums):
+            
+            # Compute the difference
+            difference = target -value 
+            
+            # If the difference exists in the previous_map then return the required ans
+            if difference in previous_map:
+                
+                # Return the ans
+                return [previous_map[difference],index]
+            
+            # Else add the element with the index to the previous_map
+            previous_map[value] = index
+            
+        # Else return the empty array
+        return {}
 ```
