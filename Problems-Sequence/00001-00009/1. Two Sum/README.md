@@ -75,9 +75,9 @@ Algorithm
 ## Solution 1.
 
 ```py
-// OJ: https://leetcode.com/problems/two-sum/
-// Time: O(N)
-// Space: O(N)
+# OJ: https://leetcode.com/problems/two-sum/
+# Time: O(N)
+# Space: O(N)
 
 class Solution:
     
