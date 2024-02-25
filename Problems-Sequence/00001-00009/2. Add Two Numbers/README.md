@@ -51,7 +51,6 @@
 
 ## Video Notes
 
-![Screenshot from 2022-07-21 07-54-00](https://user-images.githubusercontent.com/37560890/180349440-c66c877a-fd70-4c4d-9115-fa498f542127.png)
 ![Screenshot from 2022-07-21 07-54-03](https://user-images.githubusercontent.com/37560890/180349447-69325349-5522-4d9a-9eaf-88136ce7ac5e.png)
 ![Screenshot from 2022-07-21 07-54-27](https://user-images.githubusercontent.com/37560890/180349448-3d392990-bfab-4290-94c5-7e7bbce1524a.png)
 ![Screenshot from 2022-07-21 07-54-36](https://user-images.githubusercontent.com/37560890/180349449-9e986258-e03a-4f2a-b45f-d55b72528ffc.png)
