@@ -88,7 +88,7 @@ Algorithm
 ```
 
 
-## Solution 1.
+## Solution 1 - Python
 
 ```py
 # Definition for singly-linked list.
@@ -154,6 +154,8 @@ class Solution:
         # Return the dummy next
         return dummy.next
 ```
+
+## Solution 1 - C++
 
 ```cpp
 // OJ: https://leetcode.com/problems/add-two-numbers/
