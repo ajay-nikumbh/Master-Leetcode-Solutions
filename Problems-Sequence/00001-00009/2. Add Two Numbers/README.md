@@ -90,6 +90,71 @@ Algorithm
 
 ## Solution 1.
 
+```py
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+
+class Solution:
+
+    # Define the method
+    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
+        
+        # Create the dummy node
+        dummy = ListNode(0)
+        
+        # Point the current node to the dummy node
+        curr = dummy
+
+        # Initialize the carry to 0
+        carry = 0
+        
+        # Loop till the l1 or l2 or carry is 1
+        while l1 or l2 or  carry == 1: 
+            
+            # Define the variable for the sum_compute
+            sum_compute = 0
+            
+            # If the l1 is active then
+            if l1:
+                
+                # Update the sum_compute 
+                sum_compute += l1.val
+                
+                # Move the l1 to the next node
+                l1 = l1.next
+            
+            # If the l2 is active then 
+            if l2:
+                
+                # Update the sum_compute
+                sum_compute += l2.val
+
+                # Move the l2 to the next node
+                l2 = l2.next
+            
+            
+            # Add the carry to the sum_compute
+            sum_compute += carry
+            
+            # Update the carry
+            carry = sum_compute//10
+            
+            # Make the new node 
+            node = ListNode(sum_compute % 10)
+            
+            # Attach the new node to the current next
+            curr.next = node
+            
+            # Update the current next
+            curr = curr.next
+        
+        # Return the dummy next
+        return dummy.next
+```
+
 ```cpp
 // OJ: https://leetcode.com/problems/add-two-numbers/
 // Time: O(max(l1,l2))
