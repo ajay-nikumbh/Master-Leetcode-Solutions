@@ -56,6 +56,19 @@
 * [Max Number of K-Sum Pairs (Medium)](https://leetcode.com/problems/max-number-of-k-sum-pairs/)
 * [Count Good Meals (Medium)](https://leetcode.com/problems/count-good-meals/)
 
+## Video Notes
+
+![Screenshot from 2022-07-29 09-03-14](https://user-images.githubusercontent.com/109052326/183296804-21c498ba-5986-4a60-ac62-e90d8afac6f4.png)
+![Screenshot from 2022-07-29 09-04-21](https://user-images.githubusercontent.com/109052326/183296809-887c5eca-b82f-4641-8998-b860445af9f1.png)
+![Screenshot from 2022-07-29 09-04-35](https://user-images.githubusercontent.com/109052326/183296812-1ab4b6be-6014-4555-963b-ede48c8764b6.png)
+![Screenshot from 2022-07-29 09-07-29](https://user-images.githubusercontent.com/109052326/183296814-d6e92a76-5595-411a-8b22-5cbcdd1ba108.png)
+![Screenshot from 2022-07-29 09-07-43](https://user-images.githubusercontent.com/109052326/183296816-e5e0a3e7-59e3-44b4-b462-0aef8412f98b.png)
+![Screenshot from 2022-07-29 09-07-59](https://user-images.githubusercontent.com/109052326/183296817-6037719d-e664-4791-bdef-fdff90caba50.png)
+![Screenshot from 2022-07-29 09-08-09](https://user-images.githubusercontent.com/109052326/183296818-eef2d5aa-ffe2-40b2-9ef8-48c80d51d9c5.png)
+
+
+
+
 ## My personal notes
 
 ```cpp
@@ -72,7 +85,7 @@ Algorithm
 ```
 
 
-## Solution 1.
+## Solution 1 - Python
 
 ```py
 # OJ: https://leetcode.com/problems/two-sum/
@@ -108,3 +121,45 @@ class Solution:
         # Else return the empty array
         return {}
 ```
+
+
+## Solution 1 - C++
+
+```cpp
+// OJ: https://leetcode.com/problems/two-sum/
+// Time: O(NlogN)
+// Space: O(N)
+
+class Solution 
+{
+public:
+    vector<int> twoSum(vector<int>& nums, int target) 
+    {
+        // For storing the result
+        vector<int> ans;
+        
+        // Create a hashtable / Map for mapping entries
+        unordered_map<int,int> um;
+        
+        // Iterate on the nums array
+        for(int i=0;i<nums.size();i++)
+        {
+            // If the ans found in the hashtable then do the following
+            if(um.find(target-nums[i]) != um.end())
+            {
+                ans.push_back(um[target-nums[i]]);
+                ans.push_back(i);
+            }
+            
+            // If no ans found then
+            um[nums[i]] = i;
+        }
+        
+        // Finally return the ans
+        return ans;
+        
+    }
+};
+
+```
+
